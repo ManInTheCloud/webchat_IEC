@@ -1,0 +1,14 @@
+[uwsgi]
+uid=www
+gid=www
+buffer-size=32768
+master=true
+plugin=python3
+socket=127.0.0.1:8000
+chdir=/var/www/webchatproj/webchat
+module=webchat.wsgi
+wsgi-file=webchat/wsgi.py
+process=2
+threads=2
+enable-threads = true
+daemonize=/var/log/uwsgi/webchat_uwsgi.log

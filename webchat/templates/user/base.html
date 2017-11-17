@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.css">
+	</head>
+
+<body class="container">
+<div class="container-fluid" style="margin-top: 30px">
+	<div class="well" style="width: 320px; margin-left: auto; margin-right: auto">
+		<h3 style="margin: 0 0 20px;font-family: 微软雅黑;">{%block head %}{% endblock %}</h3>
+		{% block action %}{% endblock %}
+		{% block error %}{% endblock %}
+	</div>
+</div>
+</body>
+</html>

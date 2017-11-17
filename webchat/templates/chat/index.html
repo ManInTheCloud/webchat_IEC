@@ -1,0 +1,33 @@
+{% extends "layout/base.html" %}
+
+{% block nav-left %}
+	<ul class="nav navbar-nav">
+		<li class="active"><a href="/chat/">Homepage</a></li>
+	</ul>
+{% endblock %}
+
+{% block content %}
+	<div id="home">
+		<div class="page-header">
+		<h1>Hi {{ user }},welcome to the Chat room!</h1>
+			<!--<a href="/createroom/">Create new room</a>-->
+		<h3>All rooms</h3>
+		</div>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Room ID</th>
+					<th>Room name</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for item in RoomObj %}
+					<tr>
+						<th>{{ item.roomid }}</th>
+						<th><a href="/chat/{{ item.roomid }}">{{ item }}</a></th>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+{% endblock %}

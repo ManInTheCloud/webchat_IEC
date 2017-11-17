@@ -1,0 +1,10 @@
+2017-10-28 14:34:12,069 - MainThread-webserver.py:189 - Got connection from (118.115.15.90:2331)
+2017-10-28 14:34:12,070 - MainThread-webserver.py:193 - (118.115.15.90:2331):create new thread for client
+2017-10-28 14:34:12,074 - Thread-1-webserver.py:60 - (118.115.15.90:2331):handshake succeed
+2017-10-28 14:34:12,186 - Thread-1-webserver.py:73 - (118.115.15.90:2331):create 3333room
+2017-10-28 14:36:03,130 - MainThread-webserver.py:189 - Got connection from (118.115.15.90:2503)
+2017-10-28 14:36:03,132 - MainThread-webserver.py:193 - (118.115.15.90:2503):create new thread for client
+2017-10-28 14:36:03,132 - Thread-2-webserver.py:60 - (118.115.15.90:2503):handshake succeed
+2017-10-28 14:36:22,206 - Thread-2-webserver.py:88 - (118.115.15.90:2503):connection closed
+2017-10-28 14:36:32,525 - Thread-1-webserver.py:83 - (118.115.15.90:2331):delete 3333room
+2017-10-28 14:36:32,525 - Thread-1-webserver.py:88 - (118.115.15.90:2331):connection closed

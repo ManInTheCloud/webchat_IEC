@@ -1,0 +1,42 @@
+{% extends 'user/base.html' %}
+{% block title %}Register{% endblock %}
+{% block head %}Register{% endblock %}
+{% block action %}
+<form action="/accounts/register/" method="POST">
+			{% csrf_token %}
+			<div id="div_id_username" class="clearfix">
+				<div class="form-group">
+					<label for="id_username">Username:</label>
+					<input type="text" name="username" maxlength="32" autocapitalize="off" autocorrect="off" class="form-control" id="id_username" required="">
+				</div>
+			</div>
+			<div id="div_id_email" class="clearfix">
+				<div class="form-group">
+					<label for="id_email">E-mail:</label>
+					<input type="email" name="email" maxlength="25" autocapitalize="off" autocorrect="off" class="form-control" id="id_email" required="">
+				</div>
+			</div>
+			<div id="div_id_password1" class="clearfix">
+				<div class="form-group">
+					<label for="id_password1">Password:</label>
+					<input type="password" name="password1" maxlength="16" autocapitalize="off" autocorrect="off" class="form-control" id="id_password1" required="">
+				</div>
+			</div>
+			<div id="div_id_password2" class="clearfix">
+				<div class="form-group">
+					<label for="id_password2">Confirm password:</label>
+					<input type="password" name="password2" maxlength="16" autocapitalize="off" autocorrect="off" class="form-control" id="id_password2" required="">
+				</div>
+			</div>
+			<input type="submit" name="submit" value="sign up" class="btn btn-primary form-control" id="submit-id-submit">
+		</form>
+{% endblock %}
+{% block error %}
+{% if errors %}
+<ul>
+{% for err in errors %}
+	<li>{{ err|escape }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+{% endblock %}
